@@ -1,0 +1,92 @@
+
+
+## 🧹 **Data Cleaning Questions**
+
+1. **Missing Data**
+   * How many missing values are there in each column?
+   * Replace missing `Age` and `Salary` with appropriate values (mean/median or default).
+   * Fill missing `City` and `Name` with `"Unknown"`.
+
+2. **Inconsistent Formatting**
+
+   * Standardize all city names (e.g., `new york`, `NY`, `New York` → `New York`).
+   * Convert all `Name` entries to proper case (e.g., `bob` → `Bob`).
+
+3. **Incorrect Data Types**
+
+   * Convert the `Age` column to numeric and handle non-numeric entries.
+   * Convert `Join Date` to datetime format and fix inconsistencies.
+
+4. **Outliers and Invalid Values**
+
+   * Find and remove outliers in `Age` and `Salary` (e.g., negative or unrealistic values).
+   * Identify and correct invalid email formats.
+
+5. **Duplicates and Irrelevant Columns**
+
+   * How many duplicate rows are present? Remove them.
+   * Drop the column `Unnamed: 0` if it's unnecessary.
+
+6. **Fix Categorical Data**
+
+   * Group spelling variants in the `Name` column (e.g., `Charlie`, `Ch@rlie`) into a single name.
+   * Create a column showing the standardized version of names and cities.
+
+
+Great! Here are **more advanced and practical data cleaning and analysis questions** you can add to your checklist. These go beyond basics and help simulate real-world scenarios:
+
+---
+
+## 🧹 **Additional Data Cleaning Questions**
+
+7. **Standardization Across Columns**
+
+   * Ensure all `Salary` values are in the same currency or format (e.g., remove text like `"fifty thousand"`).
+   * Replace all blanks (`""`) consistently with `NaN`.
+
+8. **Cross-Field Validation**
+
+   * Are there any employees with a salary but no name or city?
+   * Are there any entries where the `Join Date` is in the future?
+
+9. **Conditional Corrections**
+
+   * If `Age` is missing but `Salary` is present, impute age based on similar salaries.
+   * If `City` is missing but `Email` contains a city-based domain (e.g., `nyuser@example.com`), infer the city.
+
+10. **Check Unusual Patterns**
+
+* Are there any names that appear more than 50 times?
+* Are there any age values that cluster around unrealistic values (e.g., many people aged 150)?
+
+11. **Flag Potential Errors**
+
+* Create a new column called `Data_Quality_Flag` to mark rows with multiple issues (e.g., invalid email **and** missing age).
+
+12. **Feature Engineering**
+
+* Extract year from `Join Date` and store in a new column `Join_Year`.
+* Create a boolean column `Is_Valid_Email` based on regex checks.
+
+
+---
+
+## 📊 **Basic Analysis Questions (Post-Cleaning)**
+
+1. What is the average age and salary of employees?
+2. How many employees joined each year?
+3. Which city has the highest number of employees?
+4. What are the most common names among employees?
+5. How many invalid email entries were there before cleaning?
+6. What is the distribution of salaries by city?
+7. Which names are most common in each city?
+8. What percentage of employees joined before 2020?
+9. How many people have duplicate names but different emails?
+10. What is the average time (in days) since each employee joined?
+11. What is the correlation between age and salary?
+12. Are employees from certain cities earning significantly more?
+
+---
+
+---
+
